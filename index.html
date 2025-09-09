@@ -3,136 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Game Dev của [Tên của bạn]</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Nguyễn Quốc Trung - Game Developer Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+   <!-- Cấu trúc này là ĐÚNG để nav bar dính lại -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">NQT.dev</a>
+            <ul class="nav-menu">
+                <li><a href="#about">Về tôi</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#portfolio">Dự án</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-section">
         <div class="container">
-            <h1>[Tên của bạn]</h1>
-            <p>Sinh viên Game Developer</p>
+            <h1>Nguyễn Quốc Trung</h1>
+            <p>Game Developer đam mê tạo ra những thế giới sống động</p>
             <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> Email</a>
-                <!-- Thêm link Itch.io nếu có -->
-                <a href="https://yourusername.itch.io/" target="_blank"><i class="fas fa-gamepad"></i> Itch.io</a>
+                <a href="https://github.com/trungit-lab" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/trungitdev/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:trungitdev@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </header>
 
-    <section id="about" class="container">
-        <h2>Về tôi</h2>
-        <p>Xin chào! Tôi là một sinh viên Game Developer với niềm đam mê sâu sắc về [lĩnh vực bạn quan tâm nhất, ví dụ: Gameplay Programming, AI, Level Design]. Tôi có kinh nghiệm với [Ngôn ngữ lập trình chính, ví dụ: C#, C++] và các Game Engine như [Unity/Unreal Engine]. Tôi luôn tìm kiếm cơ hội để học hỏi và đóng góp vào việc tạo ra những trải nghiệm game độc đáo và hấp dẫn.</p>
-        <p>Tôi đặc biệt quan tâm đến [kỹ năng cụ thể, ví dụ: phát triển hệ thống gameplay, tối ưu hóa hiệu suất, thiết kế tương tác người dùng]. Hãy cùng xem qua các dự án của tôi bên dưới!</p>
-    </section>
-
-    <section id="skills" class="container">
-        <h2>Kỹ năng</h2>
-        <div class="skills-grid">
-            <div>
-                <h3>Ngôn ngữ lập trình</h3>
-                <ul>
-                    <li>C#</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                    <li>JavaScript (Basic)</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Game Engines</h3>
-                <ul>
-                    <li>Unity 3D</li>
-                    <li>Unreal Engine 5 (Basic)</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Công cụ & Công nghệ</h3>
-                <ul>
-                    <li>Git & GitHub</li>
-                    <li>Visual Studio</li>
-                    <li>Blender (Basic)</li>
-                    <li>Jira / Trello</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Lĩnh vực chuyên môn</h3>
-                <ul>
-                    <li>Gameplay Programming</li>
-                    <li>AI Scripting</li>
-                    <li>Level Design (Basic)</li>
-                    <li>UI/UX Implementation</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="container">
-        <h2>Dự án Game của tôi</h2>
-
-        <!-- Bắt đầu Dự án Game 1 -->
-        <div class="project-item">
-            <h3>[Tên Game 1]</h3>
-            <p class="role">**Vai trò của tôi:** [Ví dụ: Gameplay Programmer, AI Developer]</p>
-            <p class="description">Mô tả ngắn gọn về game này. [Tên Game 1] là một [thể loại game, ví dụ: game platformer 2D] được phát triển bằng [Engine, ví dụ: Unity] trong thời gian [ví dụ: 3 tháng].</p>
-            
-            <h4>Những đóng góp chính:</h4>
-            <ul>
-                <li>Phát triển hệ thống di chuyển và điều khiển nhân vật chính.</li>
-                <li>Triển khai AI cho kẻ thù cơ bản và các pattern tấn công.</li>
-                <li>Thiết kế và lập trình các tương tác môi trường (nền tảng di chuyển, bẫy).</li>
-            </ul>
-
-            <div class="media-container">
-                <img src="images/game1_screenshot.jpg" alt="Screenshot của [Tên Game 1]">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_CUA_GAME_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <main>
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" class="container">
+            <h2 class="section-title">Về tôi</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- THAY THẾ bằng ảnh của bạn -->
+                    <img src="images/profile-picture.jpg" alt="Ảnh đại diện của Nguyễn Quốc Trung">
+                </div>
+                <div class="about-text">
+                    <h3>Xin chào!</h3>
+                    <p>Tôi là một nhà phát triển game với khát vọng kiến tạo nên những thế giới và trải nghiệm độc đáo. Từ những ngày còn là một đứa trẻ mơ mộng, tôi đã luôn bị cuốn hút bởi sức mạnh của trò chơi điện tử trong việc kể chuyện và kết nối mọi người.</p>
+                    <p>Tôi chọn con đường này vì tôi tin rằng mỗi dòng code, mỗi cơ chế gameplay đều là một viên gạch để xây dựng nên những vũ trụ diệu kỳ, nơi người chơi có thể khám phá, thử thách và tìm thấy niềm vui. Mục tiêu của tôi là biến những ý tưởng táo bạo thành hiện thực.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="project-links">
-                <a href="https://github.com/yourusername/game1-repo" target="_blank" class="btn"><i class="fab fa-github"></i> Mã nguồn</a>
-                <a href="https://yourusername.itch.io/game1" target="_blank" class="btn"><i class="fas fa-play-circle"></i> Chơi thử/Tải về</a>
-                <!-- Nếu có link demo chơi trực tiếp trên web, thêm vào đây -->
-            </div>
-        </div>
-        <!-- Kết thúc Dự án Game 1 -->
-
-        <!-- Bắt đầu Dự án Game 2 (lặp lại cấu trúc tương tự) -->
-        <div class="project-item">
-            <h3>[Tên Game 2]</h3>
-            <p class="role">**Vai trò của tôi:** [Ví dụ: UI/UX Programmer, Level Designer]</p>
-            <p class="description">Mô tả ngắn gọn về game này. [Tên Game 2] là một [thể loại game, ví dụ: game giải đố] tập trung vào [cơ chế chính, ví dụ: tương tác vật lý].</p>
-            
-            <h4>Những đóng góp chính:</h4>
-            <ul>
-                <li>Thiết kế và lập trình giao diện người dùng (menu, HUD, hệ thống inventory).</li>
-                <li>Sử dụng [Unreal Engine Blueprints] để tạo các kịch bản tương tác level.</li>
-                <li>Tối ưu hóa hiệu suất cho các hiệu ứng hình ảnh.</li>
-            </ul>
-
-            <div class="media-container">
-                <img src="images/game2_screenshot.jpg" alt="Screenshot của [Tên Game 2]">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_CUA_GAME_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- ===== SKILLS SECTION ===== -->
+        <section id="skills" class="container">
+            <h2 class="section-title">Hộp đồ nghề của tôi</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fas fa-code"></i> Ngôn ngữ</h3>
+                    <ul>
+                        <li>C#</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-gamepad"></i> Game Engines</h3>
+                    <ul>
+                        <li>Unity 3D</li>
+                        <li>Unreal Engine (Cơ bản)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-tools"></i> Công cụ</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Visual Studio</li>
+                        <li>Blender (Cơ bản)</li>
+                        <li>Jira / Trello</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-star"></i> Chuyên môn</h3>
+                    <ul>
+                        <li>Gameplay Programming</li>
+                        <li>Web Programming</li>
+                        <li>Level Design (Cơ bản)</li>
+                        <li>UI/UX Implementation</li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-            <div class="project-links">
-                <a href="https://github.com/yourusername/game2-repo" target="_blank" class="btn"><i class="fab fa-github"></i> Mã nguồn</a>
-                <a href="#" target="_blank" class="btn"><i class="fas fa-play-circle"></i> Xem Trailer</a>
-            </div>
-        </div>
-        <!-- Kết thúc Dự án Game 2 -->
+        <!-- ===== PORTFOLIO SECTION ===== -->
+        <section id="portfolio" class="container">
+            <h2 class="section-title">Các dự án nổi bật</h2>
 
-        <!-- Thêm các dự án khác của bạn tại đây theo cấu trúc tương tự -->
+            <!-- Bắt đầu Dự án Game 1 -->
+            <article class="project-item">
+                <div class="project-video">
+                    <div class="video-responsive-wrapper">
+                        <!-- !!! QUAN TRỌNG: Thay thế YOUR_YOUTUBE_VIDEO_ID bằng ID video của bạn !!! -->
+                        <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>[Tên Game 1]</h3>
+                    <p class="project-description">
+                        [Tên Game 1] là một [thể loại, ví dụ: platformer 2D pixel-art] đầy thử thách, được phát triển bằng Unity trong [số] tháng.
+                    </p>
+                    <p><strong>Đóng góp chính:</strong> Phát triển cơ chế điều khiển nhân vật, lập trình AI cho kẻ thù và thiết kế các tương tác môi trường.</p>
+                    <div class="project-tags">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>Gameplay Programming</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn btn-primary"><i class="fas fa-play-circle"></i> Chơi thử</a>
+                        <a href="#" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> Mã nguồn</a>
+                    </div>
+                </div>
+            </article>
+            <!-- Kết thúc Dự án Game 1 -->
 
-    </section>
+            <!-- Bắt đầu Dự án Game 2 -->
+            <article class="project-item">
+                <div class="project-video">
+                    <div class="video-responsive-wrapper">
+                        <!-- !!! QUAN TRỌNG: Thay thế YOUR_YOUTUBE_VIDEO_ID bằng ID video của bạn !!! -->
+                        <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_2" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>[Tên Game 2]</h3>
+                    <p class="project-description">
+                       [Tên Game 2] là một [thể loại, ví dụ: game giải đố 3D] tập trung vào cơ chế tương tác vật lý, được xây dựng trên nền tảng Unreal Engine.
+                    </p>
+                    <p><strong>Đóng góp chính:</strong> Thiết kế và lập trình giao diện người dùng (UI), tạo các kịch bản màn chơi bằng Blueprints, và tối ưu hóa hiệu suất.</p>
+                     <div class="project-tags">
+                        <span>Unreal Engine</span>
+                        <span>Blueprints</span>
+                        <span>UI/UX</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="btn btn-primary"><i class="fas fa-video"></i> Xem Trailer</a>
+                        <a href="#" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> Mã nguồn</a>
+                    </div>
+                </div>
+            </article>
+            <!-- Kết thúc Dự án Game 2 -->
 
-    <footer>
+        </section>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer id="contact">
         <div class="container">
-            <p>&copy; <span id="current-year"></span> [Tên của bạn]. Bảo lưu mọi quyền.</p>
+            <h2>Liên hệ với tôi</h2>
+            <p>Tôi luôn sẵn sàng lắng nghe các cơ hội hợp tác thú vị. <br>Hãy kết nối với tôi qua email hoặc các mạng xã hội bên dưới!</p>
+            <a href="mailto:trungitdev@gmail.com" class="btn btn-primary">trungitdev@gmail.com</a>
+            <div class="footer-social">
+                <a href="https://github.com/trungit-lab" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/trungitdev/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="copyright">&copy; <span id="current-year"></span> Nguyễn Quốc Trung. All Rights Reserved.</p>
         </div>
     </footer>
 
