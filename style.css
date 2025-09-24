@@ -356,9 +356,13 @@ footer p {
     .about-content, .project-item, .project-item:nth-child(odd) {
         flex-direction: column;
     }
-    .about-image {
-        max-width: 200px;
-        margin: 0 auto 30px;
+    .about-image img {
+    width: 220px;      /* chỉnh nhỏ lại (ban đầu có thể là 300–400px) */
+    height: 220px;      /* tự động giữ tỉ lệ */
+    border-radius: 50%; /* bo tròn thành hình tròn */
+    object-fit: cover;  /* đảm bảo ảnh không bị méo */
+    border: 3px solid #007bff; /* thêm viền xanh cho nổi bật */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* tạo bóng mềm */
     }
     .project-video {
         max-width: 100%;
