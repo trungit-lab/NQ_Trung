@@ -1,214 +1,939 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Quốc Trung - Game Developer Portfolio</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Your CSS -->
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyễn Quốc Trung | Unity Developer Portfolio</title>
+    <meta name="description" content="Portfolio của Nguyễn Quốc Trung - Unity Developer tập trung vào gameplay systems, enemy behavior, UI systems và tối ưu hiệu năng trong game." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #111827;
+            --panel-2: #1f2937;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --line: rgba(148, 163, 184, 0.18);
+            --brand: #60a5fa;
+            --brand-2: #22c55e;
+            --white: #ffffff;
+            --shadow: 0 16px 40px rgba(2, 6, 23, 0.28);
+            --radius: 20px;
+            --max: 1120px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(100% - 32px, var(--max));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 88px 0;
+        }
+
+        .section-title {
+            font-size: clamp(1.9rem, 2.6vw, 2.6rem);
+            line-height: 1.15;
+            margin-bottom: 14px;
+            font-weight: 800;
+            color: var(--white);
+        }
+
+        .section-subtitle {
+            max-width: 760px;
+            color: var(--muted);
+            margin-bottom: 32px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border: 1px solid rgba(96, 165, 250, 0.25);
+            background: rgba(96, 165, 250, 0.1);
+            color: #bfdbfe;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+
+        .main-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(14px);
+            background: rgba(11, 18, 32, 0.72);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 74px;
+            gap: 20px;
+        }
+
+        .nav-logo {
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            color: var(--white);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            color: var(--muted);
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--white);
+        }
+
+        .hero {
+            padding: 92px 0 52px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .hero-card,
+        .panel {
+            background: rgba(17, 24, 39, 0.78);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card {
+            padding: 36px;
+        }
+
+        .hero-card h1 {
+            font-size: clamp(2.5rem, 4.8vw, 4.5rem);
+            line-height: 1.02;
+            margin: 16px 0 16px;
+            color: var(--white);
+            letter-spacing: -0.04em;
+        }
+
+        .hero-role {
+            font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+            color: #bfdbfe;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .hero-desc {
+            color: var(--muted);
+            max-width: 60ch;
+            margin-bottom: 24px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 22px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 18px;
+            border-radius: 14px;
+            font-weight: 700;
+            border: 1px solid transparent;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--brand), #2563eb);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            border-color: var(--line);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--white);
+        }
+
+        .hero-meta {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .meta-item {
+            padding: 14px 16px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .meta-item strong {
+            display: block;
+            color: var(--white);
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .profile-panel {
+            padding: 28px;
+        }
+
+        .profile-photo {
+            width: 180px;
+            aspect-ratio: 1;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid rgba(96, 165, 250, 0.28);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            color: var(--muted);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .contact-item:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-item i {
+            color: #93c5fd;
+            width: 18px;
+            margin-top: 4px;
+        }
+
+        .contact-item span,
+        .contact-item a {
+            color: var(--text);
+            word-break: break-word;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 24px;
+        }
+
+        .about-card,
+        .skill-card,
+        .experience-card,
+        .project-card,
+        .achieve-card {
+            padding: 28px;
+        }
+
+        .about-card p {
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        .highlights {
+            display: grid;
+            gap: 14px;
+        }
+
+        .highlight-item {
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--line);
+        }
+
+        .highlight-item h4 {
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .highlight-item p {
+            color: var(--muted);
+            font-size: 0.96rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .skill-card h3 {
+            color: var(--white);
+            margin-bottom: 14px;
+            font-size: 1.05rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .skill-card li {
+            color: var(--muted);
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .skill-card li::before {
+            content: "•";
+            color: var(--brand);
+            position: absolute;
+            left: 0;
+        }
+
+        .experience-list,
+        .projects-list,
+        .achievements-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .experience-head,
+        .project-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .experience-head h3,
+        .project-head h3 {
+            color: var(--white);
+            font-size: 1.18rem;
+        }
+
+        .experience-head p,
+        .project-head p {
+            color: #bfdbfe;
+            font-weight: 600;
+        }
+
+        .company-note,
+        .project-desc {
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        .bullet-list {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .bullet-list li {
+            color: var(--muted);
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            color: var(--brand-2);
+            position: absolute;
+            left: 0;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 18px;
+            align-items: start;
+        }
+
+        .video-wrap {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: #020617;
+        }
+
+        .video-wrap iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 14px 0 18px;
+        }
+
+        .tag {
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--line);
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .achievements-list li {
+            color: var(--muted);
+            padding: 18px 22px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .achievements-list strong {
+            color: var(--white);
+        }
+
+        .footer {
+            padding: 64px 0 56px;
+            border-top: 1px solid var(--line);
+            margin-top: 20px;
+        }
+
+        .footer-box {
+            text-align: center;
+            padding: 32px;
+            background: rgba(17, 24, 39, 0.78);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .footer-box h2 {
+            color: var(--white);
+            font-size: clamp(1.7rem, 2.4vw, 2.2rem);
+            margin-bottom: 12px;
+        }
+
+        .footer-box p {
+            color: var(--muted);
+            max-width: 640px;
+            margin: 0 auto 18px;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--line);
+            color: var(--white);
+        }
+
+        .copyright {
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 960px) {
+            .hero-grid,
+            .about-grid,
+            .project-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-meta {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .nav-wrap {
+                padding: 12px 0;
+            }
+
+            .nav-menu {
+                gap: 14px;
+                font-size: 0.95rem;
+            }
+
+            .hero {
+                padding-top: 72px;
+            }
+
+            .hero-card,
+            .profile-panel,
+            .about-card,
+            .skill-card,
+            .experience-card,
+            .project-card,
+            .achieve-card,
+            .footer-box {
+                padding: 22px;
+            }
+
+        .video-wrap {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: #020617;
+    position: relative;
+}
+
+.video-cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(to top, rgba(2, 6, 23, 0.72), rgba(2, 6, 23, 0.28));
+    color: #fff;
+    transition: background 0.2s ease;
+}
+
+.video-cover:hover .video-overlay {
+    background: linear-gradient(to top, rgba(2, 6, 23, 0.56), rgba(2, 6, 23, 0.16));
+}
+
+.play-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    font-size: 1.25rem;
+}
+
+.watch-text {
+    font-weight: 700;
+    font-size: 1rem;
+}   
+        }
+    </style>
 </head>
 <body>
-   <!-- NAVIGATION -->
     <nav class="main-nav">
-        <div class="container nav-container">
-            <a href="#" class="nav-logo">NQT.dev</a>
+        <div class="container nav-wrap">
+            <a href="#top" class="nav-logo">NQT.dev</a>
             <ul class="nav-menu">
                 <li><a href="#about">Về tôi</a></li>
                 <li><a href="#skills">Kỹ năng</a></li>
-                <li><a href="#portfolio">Dự án</a></li>
+                <li><a href="#experience">Kinh nghiệm</a></li>
+                <li><a href="#projects">Dự án</a></li>
                 <li><a href="#achievements">Hoạt động</a></li>
                 <li><a href="#contact">Liên hệ</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <header class="hero-section">
-        <div class="container">
-            <h1>Nguyễn Quốc Trung</h1>
-            <p>Unity / Game Developer - Đam mê tạo ra những thế giới sống động</p>
-            <div class="social-links">
-                <a href="https://github.com/trungit-lab" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/trungitdev/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:trungitdev@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <header class="hero" id="top">
+        <div class="container hero-grid">
+            <div class="hero-card">
+                <span class="pill"><i class="fa-solid fa-gamepad"></i> Unity Developer Portfolio</span>
+                <h1>Nguyễn Quốc Trung</h1>
+                <p class="hero-role">Game Developer • Unity • Cocos • C#</p>
+                <p class="hero-desc">
+                    Tôi là Unity Developer tập trung vào gameplay systems, enemy behavior, UI systems và tối ưu hiệu năng trong game.
+                    Tôi yêu thích việc xây dựng các hệ thống rõ ràng, dễ mở rộng và có thể dùng tốt trong sản phẩm thực tế.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-play"></i> Xem dự án</a>
+                    <a href="https://github.com/trungit-lab" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <strong>Kinh nghiệm nổi bật</strong>
+                        Enemy systems, object pooling, gameplay UI, localization, profiling.
+                    </div>
+                    <div class="meta-item">
+                        <strong>Mục tiêu hiện tại</strong>
+                        Tìm cơ hội Unity Developer để phát triển sâu hơn về gameplay programming và systems design.
+                    </div>
+                </div>
             </div>
+
+            <aside class="panel profile-panel">
+                <div class="profile-photo">
+                    <img src="NQT.jpg" alt="Ảnh chân dung Nguyễn Quốc Trung" />
+                </div>
+
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:trungitdev@gmail.com">trungitdev@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0866536939</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Mỹ Đình, Nam Từ Liêm, Hà Nội</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-link"></i>
+                        <a href="https://trungit-lab.github.io/NQ_Trung/" target="_blank">Portfolio / Demo Hub</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/trungitdev/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/trungit-lab" target="_blank">github.com/trungit-lab</a>
+                    </div>
+                </div>
+            </aside>
         </div>
     </header>
 
     <main>
-        <!-- ABOUT -->
-        <section id="about" class="container">
-            <h2 class="section-title">Về tôi</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="NQT.jpg" alt="Ảnh đại diện của Nguyễn Quốc Trung">
+        <section id="about" class="section">
+            <div class="container about-grid">
+                <div class="panel about-card">
+                    <h2 class="section-title">Về tôi</h2>
+                    <p>
+                        Tôi là sinh viên ngành Công nghệ thông tin và Truyền thông tại Đại học Công nghiệp Hà Nội,
+                        đồng thời đã tham gia các dự án thực tế với vai trò Unity Developer.
+                    </p>
+                    <p>
+                        Tôi quan tâm nhiều đến việc tổ chức gameplay systems rõ ràng, triển khai enemy behavior theo hướng dễ mở rộng,
+                        tối ưu spawning bằng object pooling, và cải thiện trải nghiệm người chơi thông qua UI logic hợp lý.
+                    </p>
+                    <p>
+                        Hiện tôi muốn tham gia môi trường chuyên nghiệp để phát triển sâu hơn về gameplay programming,
+                        systems design và tối ưu hiệu năng trong Unity.
+                    </p>
                 </div>
-                <div class="about-text">
-                    <h3>Xin chào!</h3>
-                    <p>Tôi là một Unity Developer với khát vọng kiến tạo nên những thế giới và trải nghiệm độc đáo. 
-                       Tôi đã tham gia các dự án thực tế tại EPICSOFT trong lĩnh vực game.</p>
-                    <p><strong>Mục tiêu nghề nghiệp:</strong> Học hỏi, phát triển trong môi trường chuyên nghiệp và trở thành Game Developer tập trung vào gameplay programming, tối ưu hiệu suất và phát triển đa nền tảng.</p>
-                    <p><strong>Học vấn:</strong> Đại học Công Nghiệp Hà Nội (2022–2026), Khoa CNTT, GPA 3.0</p>
+
+                <div class="highlights">
+                    <div class="panel highlight-item">
+                        <h4>Điểm mạnh chuyên môn</h4>
+                        <p>Gameplay systems, enemy behavior, UI systems, object pooling, localization và runtime optimization.</p>
+                    </div>
+                    <div class="panel highlight-item">
+                        <h4>Học vấn</h4>
+                        <p>Đại học Công nghiệp Hà Nội (2022–2026) — Trường Công nghệ thông tin và Truyền thông, GPA 3.0.</p>
+                    </div>
+                    <div class="panel highlight-item">
+                        <h4>Phong cách làm việc</h4>
+                        <p>Tư duy hệ thống, thích code rõ ràng, chủ động học nhanh và ưu tiên giải pháp có thể maintain lâu dài.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SKILLS -->
-        <section id="skills" class="container">
-            <h2 class="section-title">Hộp đồ nghề của tôi</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3><i class="fas fa-code"></i> Ngôn ngữ</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>C++</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>SQL (cơ bản)</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fas fa-gamepad"></i> Game Engines</h3>
-                    <ul>
-                        <li>Unity 3D</li>
-                        <li>Unreal Engine (Cơ bản)</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fas fa-tools"></i> Công cụ</h3>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>Visual Studio</li>
-                        <li>Blender (Cơ bản)</li>
-                        <li>Jira / Trello</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fas fa-star"></i> Chuyên môn</h3>
-                    <ul>
-                        <li>Gameplay Programming</li>
-                        <li>AI Programming</li>
-                        <li>UI/UX Implementation</li>
-                        <li>Level Design (Cơ bản)</li>
-                        <li>Xử lý sự cố kỹ thuật</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fas fa-user-friends"></i> Kỹ năng mềm</h3>
-                    <ul>
-                        <li>Giao tiếp & truyền đạt ý tưởng rõ ràng</li>
-                        <li>Tư duy giải quyết vấn đề</li>
-                        <li>Tinh thần tự học & nghiên cứu</li>
-                    </ul>
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Kỹ năng cốt lõi</h2>
+                <p class="section-subtitle">
+                    Tôi định vị bản thân theo hướng Unity Developer tập trung vào gameplay systems và technical implementation.
+                    
+                </p>
+
+                <div class="skills-grid">
+                    <div class="panel skill-card">
+                        <h3><i class="fa-solid fa-code"></i> Unity / C#</h3>
+                        <ul>
+                            <li>Unity</li>
+                            <li>C#</li>
+                            <li>SQL cơ bản</li>
+                            <li>Git / GitHub</li>
+                        </ul>
+                    </div>
+
+                    <div class="panel skill-card">
+                        <h3><i class="fa-solid fa-gamepad"></i> Gameplay Systems</h3>
+                        <ul>
+                            <li>Enemy Behavior</li>
+                            <li>Enemy Spawning</li>
+                            <li>Gameplay Programming</li>
+                            <li>UI System, HUD, Menu Flow</li>
+                        </ul>
+                    </div>
+
+                    <div class="panel skill-card">
+                        <h3><i class="fa-solid fa-gears"></i> Architecture & Optimization</h3>
+                        <ul>
+                            <li>State Pattern</li>
+                            <li>Observer Pattern</li>
+                            <li>Singleton Pattern</li>
+                            <li>Object Pooling</li>
+                            <li>Localization</li>
+                            <li>Unity Profiler</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- PORTFOLIO -->
-        <section id="portfolio" class="container">
-            <h2 class="section-title">Các dự án nổi bật</h2>
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Kinh nghiệm làm việc</h2>
+                <p class="section-subtitle">
+                    Các đầu việc tôi từng tham gia đều xoay quanh gameplay systems, enemy systems, UI implementation và runtime optimization.
+                </p>
 
-                    <!-- Bounce-wars -->
-            <article class="project-item">
-                <div class="project-video">
-                    <div class="video-responsive-wrapper">
-                        <iframe src="https://www.youtube.com/embed/_Hqa9qL7U1Y"
-                                title="Bounce-wars Trailer" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Bounce-wars (7/2025 - 8/2025)</h3>
-                    <p class="project-description">
-                        Bounce-wars là một game đối kháng 2 người chơi (split-screen) với hệ thống bắn đạn vật lý và 
-                        Sức mạnh Nguyên tố Kép độc đáo.
-                    </p>
-                    
-                    <div class="project-tags">
-                        <span>Unity</span><span>C#</span><span>Gameplay Programming</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Sundynny/bounce-wars.git" target="_blank" class="btn btn-secondary">
-                            <i class="fab fa-github"></i> Mã nguồn
-                        </a>
-                        <!-- <a href="https://YOUR_PROJECT_LINK_BOUNCEWARS" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-play-circle"></i> Xem chi tiết
-                        </a> -->
-                    </div>
-                </div>
-            </article>
+                <div class="experience-list">
+                    <article class="panel experience-card">
+                        <div class="experience-head">
+                            <div>
+                                <h3>SKYBULL GAMING STUDIO</h3>
+                                <p>Unity Developer</p>
+                            </div>
+                            <p>12/2025 – Nay</p>
+                        </div>
+                        <p class="company-note">
+                            Tham gia phát triển các dự án như <strong>BackHole 2</strong>, <strong>Game AI GPT4</strong> và <strong>Space Hole: Idle Tower Defense</strong>,
+                            tập trung vào enemy systems, gameplay UI, spawning, localization và tối ưu runtime.
+                        </p>
+                        <div class="project-links" style="margin-bottom: 18px;">
+                            <a href="https://play.google.com/store/apps/details?id=com.skybull.spacehole" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-google-play"></i> Space Hole trên Google Play</a>
+                        </div>
+                        <ul class="bullet-list">
+                            <li>Phát triển hệ thống hành vi enemy bằng State Pattern, giúp dễ mở rộng nhiều kiểu di chuyển và tấn công.</li>
+                            <li>Triển khai enemy spawning với Object Pooling, giúp giảm chi phí tạo/hủy object và tăng độ ổn định khi spawn trong runtime.</li>
+                            <li>Phát triển UI system cho gameplay, HUD và menu flow.</li>
+                            <li>Triển khai Localization cho nội dung UI và văn bản trong game.</li>
+                            <li>Sử dụng Unity Profiler để phân tích và tối ưu bộ nhớ, tài nguyên runtime.</li>
+                        </ul>
+                    </article>
 
-            <!-- Re:Rou -->
-            <article class="project-item">
-                <div class="project-video">
-                    <div class="video-responsive-wrapper">
-                        <iframe src="https://www.youtube.com/embed/oSN-NCjdZmc"
-                                title="Re:Rou Trailer" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                        </iframe>
-                    </div>
+                    <article class="panel experience-card">
+                        <div class="experience-head">
+                            <div>
+                                <h3>EPICSOFT</h3>
+                                <p>Unity Developer</p>
+                            </div>
+                            <p>06/2024 – 10/2024</p>
+                        </div>
+                        <p class="company-note">Ứng dụng mô phỏng 3D hỗ trợ đào tạo sửa chữa xe máy cho tập đoàn Piaggio.</p>
+                        <ul class="bullet-list">
+                            <li>Phát triển ứng dụng mô phỏng 3D hỗ trợ đào tạo sửa chữa xe máy.</li>
+                            <li>Xây dựng các tính năng tương tác 3D như xoay, hiển thị và làm mờ bộ phận kỹ thuật.</li>
+                            <li>Phối hợp với team theo Agile/Scrum để cải thiện UX và đảm bảo tiến độ triển khai.</li>
+                        </ul>
+                    </article>
                 </div>
-                <div class="project-info">
-                    <h3>Re:Rou (4/2024 - 6/2024)</h3>
-                    <p class="project-description">
-                        Re:Rou phát triển từ prototype RPG thành game sinh tồn với cơ chế điều khiển góc nhìn thứ ba 
-                        và AI linh hoạt dựa trên State Pattern.
-                    </p>
-                    
-                    <div class="project-tags">
-                        <span>Unity</span><span>C#</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/trungit-lab/Re-Rou.git" target="_blank" class="btn btn-secondary">
-                            <i class="fab fa-github"></i> Mã nguồn
-                        </a>
-                        <!-- <a href="https://YOUR_PROJECT_LINK_REROU" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-play-circle"></i> Xem chi tiết
-                        </a> -->
-                    </div>
-                </div>
-            </article>
-
+            </div>
         </section>
 
-        <!-- ACHIEVEMENTS -->
-        <section id="achievements" class="container">
-            <h2 class="section-title">Giải thưởng & Hoạt động</h2>
-            <ul class="achievements-list">
-                <li><strong>2024–2025:</strong> Giải 3 nghiên cứu khoa học cấp trường</li>
-                <li><strong>2023–2024:</strong> Tình nguyện viên CyberSchool CyberKid Vietnam</li>
-            </ul>
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Dự án nổi bật</h2>
+                <p class="section-subtitle">
+                    Hai dự án dưới đây thể hiện rõ nhất cách tôi xây gameplay, tổ chức system và triển khai các tính năng có thể demo trực tiếp.
+                </p>
+
+                <div class="projects-list">
+                    <article class="panel project-card project-grid">
+                        <div class="video-wrap">
+    <a class="video-cover" href="https://www.youtube.com/watch?v=_Hqa9qL7U1Y" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/_Hqa9qL7U1Y/hqdefault.jpg" alt="Bounce-wars gameplay demo thumbnail">
+        <div class="video-overlay">
+            <span class="play-icon"><i class="fa-solid fa-play"></i></span>
+            <span class="watch-text">Xem video trên YouTube</span>
+        </div>
+    </a>
+</div>
+                        <div>
+                            <div class="project-head">
+                                <div>
+                                    <h3>Bounce-wars</h3>
+                                    <p>Unity Developer</p>
+                                </div>
+                                <p>07/2025 – 08/2025</p>
+                            </div>
+                            <p class="project-desc">
+                                Game đối kháng 2 người chơi cục bộ với cơ chế split-screen, hệ thống di chuyển linh hoạt và lối chơi xoay quanh các hiệu ứng nguyên tố.
+                            </p>
+                            <ul class="bullet-list">
+                                <li>Phát triển gameplay đối kháng 2 người chơi với hệ thống di chuyển và bắn đạn vật lý linh hoạt.</li>
+                                <li>Thiết kế hệ thống nguyên tố kết hợp tạo buff và hiệu ứng đòn đánh.</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">Gameplay Programming</span>
+                                <span class="tag">Split-screen</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Sundynny/bounce-wars.git" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> Mã nguồn</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel project-card project-grid">
+                       <div class="video-wrap">
+    <a class="video-cover" href="https://www.youtube.com/watch?v=oSN-NCjdZmc" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/oSN-NCjdZmc/hqdefault.jpg" alt="Re:Rou gameplay demo thumbnail">
+        <div class="video-overlay">
+            <span class="play-icon"><i class="fa-solid fa-play"></i></span>
+            <span class="watch-text">Xem video trên YouTube</span>
+        </div>
+    </a>
+</div>
+                        <div>
+                            <div class="project-head">
+                                <div>
+                                    <h3>Re:Rou</h3>
+                                    <p>Unity Developer</p>
+                                </div>
+                                <p>10/2025 – 11/2025</p>
+                            </div>
+                            <p class="project-desc">
+                                Project phát triển từ prototype RPG sang hướng sinh tồn, tập trung vào hệ thống điều khiển nhân vật và kiến trúc enemy dễ mở rộng.
+                            </p>
+                            <ul class="bullet-list">
+                                <li>Thiết kế hệ thống điều khiển nhân vật giữa góc nhìn RPG và góc nhìn thứ ba kiểu FPS.</li>
+                                <li>Tái cấu trúc hệ thống enemy bằng Design Pattern để dễ mở rộng hành vi cho nhiều loại quái.</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">Enemy Systems</span>
+                                <span class="tag">Design Pattern</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/trungit-lab/Re-Rou.git" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> Mã nguồn</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section">
+            <div class="container">
+                <h2 class="section-title">Giải thưởng & Hoạt động</h2>
+                <div class="achievements-list">
+                    <div class="achieve-card panel">
+                        <strong>2024 – 2025:</strong> Giải 3 nghiên cứu khoa học cấp trường.
+                    </div>
+                    <div class="achieve-card panel">
+                        <strong>2023 – 2024:</strong> Tình nguyện viên CyberSchool CyberKid Vietnam.
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    
-    <!-- FOOTER -->
-    <footer id="contact">
+
+    <footer id="contact" class="footer">
         <div class="container">
-            <h2>Liên hệ với tôi</h2>
-            <p>Tôi luôn sẵn sàng lắng nghe các cơ hội hợp tác thú vị.<br>Kết nối qua email hoặc mạng xã hội bên dưới!</p>
-            <a href="mailto:trungitdev@gmail.com" class="btn btn-primary">trungitdev@gmail.com</a>
-            <div class="footer-social">
-                <a href="https://github.com/trungit-lab" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/trungitdev/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <div class="footer-box">
+                <h2>Liên hệ với tôi</h2>
+                <p>
+                    Tôi luôn sẵn sàng trao đổi về cơ hội Unity Developer, gameplay programming hoặc các dự án game thú vị.
+                    Nếu bạn thấy profile phù hợp, hãy kết nối với tôi qua email hoặc GitHub.
+                </p>
+                <a href="mailto:trungitdev@gmail.com" class="btn btn-primary">trungitdev@gmail.com</a>
+                <div class="footer-social">
+                    <a href="https://github.com/trungit-lab" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/trungitdev/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:trungitdev@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <p class="copyright">© <span id="current-year"></span> Nguyễn Quốc Trung. All rights reserved.</p>
             </div>
-            <p class="copyright">&copy; <span id="current-year"></span> Nguyễn Quốc Trung. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
