@@ -415,11 +415,54 @@
             border-radius: 16px;
             border: 1px solid var(--line);
             background: #020617;
+            position: relative;
         }
 
-        .video-wrap iframe {
+        .video-cover {
+            display: block;
             width: 100%;
             height: 100%;
+            position: relative;
+        }
+
+        .video-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(to top, rgba(2, 6, 23, 0.72), rgba(2, 6, 23, 0.28));
+            color: #fff;
+            transition: background 0.2s ease;
+        }
+
+        .video-cover:hover .video-overlay {
+            background: linear-gradient(to top, rgba(2, 6, 23, 0.56), rgba(2, 6, 23, 0.16));
+        }
+
+        .play-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            font-size: 1.25rem;
+        }
+
+        .watch-text {
+            font-weight: 700;
+            font-size: 1rem;
         }
 
         .tags {
@@ -445,7 +488,61 @@
             gap: 12px;
         }
 
-        .achievements-list li {
+        .subsection-title {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 20px 0 14px;
+        }
+
+        .store-projects {
+            display: grid;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .store-project-card {
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--line);
+        }
+
+        .store-project-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .store-project-head h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .store-project-role {
+            color: #bfdbfe;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .store-project-desc {
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .store-project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .achievements-list li,
+        .achieve-card {
             color: var(--muted);
             padding: 18px 22px;
             border: 1px solid var(--line);
@@ -453,7 +550,8 @@
             background: rgba(255, 255, 255, 0.03);
         }
 
-        .achievements-list strong {
+        .achievements-list strong,
+        .achieve-card strong {
             color: var(--white);
         }
 
@@ -545,62 +643,6 @@
             .footer-box {
                 padding: 22px;
             }
-
-        .video-wrap {
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: 16px;
-    border: 1px solid var(--line);
-    background: #020617;
-    position: relative;
-}
-
-.video-cover {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.video-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.video-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: linear-gradient(to top, rgba(2, 6, 23, 0.72), rgba(2, 6, 23, 0.28));
-    color: #fff;
-    transition: background 0.2s ease;
-}
-
-.video-cover:hover .video-overlay {
-    background: linear-gradient(to top, rgba(2, 6, 23, 0.56), rgba(2, 6, 23, 0.16));
-}
-
-.play-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    background: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    font-size: 1.25rem;
-}
-
-.watch-text {
-    font-weight: 700;
-    font-size: 1rem;
-}   
         }
     </style>
 </head>
@@ -632,7 +674,7 @@
 
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-play"></i> Xem dự án</a>
-                    <a href="https://github.com/trungit-lab" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://github.com/trungit-lab" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
 
                 <div class="hero-meta">
@@ -667,15 +709,15 @@
                     </div>
                     <div class="contact-item">
                         <i class="fa-solid fa-link"></i>
-                        <a href="https://trungit-lab.github.io/NQ_Trung/" target="_blank">Portfolio / Demo Hub</a>
+                        <a href="https://trungit-lab.github.io/NQ_Trung/" target="_blank" rel="noopener noreferrer">Portfolio / Demo Hub</a>
                     </div>
                     <div class="contact-item">
                         <i class="fa-brands fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/trungitdev/" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/trungitdev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </div>
                     <div class="contact-item">
                         <i class="fa-brands fa-github"></i>
-                        <a href="https://github.com/trungit-lab" target="_blank">github.com/trungit-lab</a>
+                        <a href="https://github.com/trungit-lab" target="_blank" rel="noopener noreferrer">github.com/trungit-lab</a>
                     </div>
                 </div>
             </aside>
@@ -723,7 +765,6 @@
                 <h2 class="section-title">Kỹ năng cốt lõi</h2>
                 <p class="section-subtitle">
                     Tôi định vị bản thân theo hướng Unity Developer tập trung vào gameplay systems và technical implementation.
-                    
                 </p>
 
                 <div class="skills-grid">
@@ -778,20 +819,83 @@
                             </div>
                             <p>12/2025 – Nay</p>
                         </div>
+
                         <p class="company-note">
-                            Tham gia phát triển các dự án như <strong>BackHole 2</strong>, <strong>Game AI GPT4</strong> và <strong>Space Hole: Idle Tower Defense</strong>,
-                            tập trung vào enemy systems, gameplay UI, spawning, localization và tối ưu runtime.
+                            Tham gia phát triển các dự án mobile game với vai trò Unity Developer, tập trung vào gameplay systems,
+                            enemy behavior, gameplay UI, localization và tối ưu runtime.
                         </p>
-                        <div class="project-links" style="margin-bottom: 18px;">
-                            <a href="https://play.google.com/store/apps/details?id=com.skybull.spacehole" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-google-play"></i> Space Hole trên Google Play</a>
-                        </div>
+
                         <ul class="bullet-list">
                             <li>Phát triển hệ thống hành vi enemy bằng State Pattern, giúp dễ mở rộng nhiều kiểu di chuyển và tấn công.</li>
-                            <li>Triển khai enemy spawning với Object Pooling, giúp giảm chi phí tạo/hủy object và tăng độ ổn định khi spawn trong runtime.</li>
+                            <li>Triển khai enemy spawning với Object Pooling, giúp giảm chi phí tạo/hủy object và tăng độ ổn định trong runtime.</li>
                             <li>Phát triển UI system cho gameplay, HUD và menu flow.</li>
                             <li>Triển khai Localization cho nội dung UI và văn bản trong game.</li>
                             <li>Sử dụng Unity Profiler để phân tích và tối ưu bộ nhớ, tài nguyên runtime.</li>
                         </ul>
+
+                        <h4 class="subsection-title">Các dự án đã tham gia</h4>
+
+                        <div class="store-projects">
+                            <div class="store-project-card">
+                                <div class="store-project-head">
+                                    <div>
+                                        <h4>Space Hole: Idle Tower Defense</h4>
+                                        <p class="store-project-role">Unity Developer</p>
+                                    </div>
+                                    <span class="tag">Google Play</span>
+                                </div>
+
+                                <p class="store-project-desc">
+                                    Dự án mobile game phát hành trên Google Play. Tôi tham gia phát triển các hệ thống gameplay,
+                                    enemy behavior, UI gameplay và tối ưu hiệu năng runtime trong Unity.
+                                </p>
+
+                                <ul class="bullet-list">
+                                    <li>Xây dựng và mở rộng logic gameplay liên quan đến enemy systems.</li>
+                                    <li>Triển khai UI flow và các thành phần HUD phục vụ trải nghiệm trong game.</li>
+                                    <li>Hỗ trợ tối ưu runtime bằng profiling và cải thiện quản lý object.</li>
+                                </ul>
+
+                                <div class="store-project-links">
+                                    <a href="https://play.google.com/store/apps/details?id=com.skybull.spacehole"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       class="btn btn-secondary">
+                                        <i class="fa-brands fa-google-play"></i> Xem trên Google Play
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="store-project-card">
+                                <div class="store-project-head">
+                                    <div>
+                                        <h4>Space Hole 2: Black Hole Games</h4>
+                                        <p class="store-project-role">Unity Developer</p>
+                                    </div>
+                                    <span class="tag">Google Play</span>
+                                </div>
+
+                                <p class="store-project-desc">
+                                    Phiên bản tiếp theo của dòng game Space Hole, phát hành trên Google Play. Tôi tham gia phát triển
+                                    gameplay systems, enemy behavior, UI gameplay và hỗ trợ tối ưu hiệu năng runtime trong Unity.
+                                </p>
+
+                                <ul class="bullet-list">
+                                    <li>Mở rộng và tinh chỉnh gameplay loop cho phiên bản tiếp theo của dự án.</li>
+                                    <li>Phát triển hệ thống enemy và điều chỉnh hành vi để tăng độ đa dạng trong trải nghiệm chơi.</li>
+                                    <li>Hỗ trợ UI gameplay, tối ưu runtime và cải thiện độ ổn định trong quá trình vận hành.</li>
+                                </ul>
+
+                                <div class="store-project-links">
+                                    <a href="https://play.google.com/store/apps/details?id=com.Skybull.BlackHole2&hl=vi"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       class="btn btn-secondary">
+                                        <i class="fa-brands fa-google-play"></i> Xem trên Google Play
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </article>
 
                     <article class="panel experience-card">
@@ -823,14 +927,14 @@
                 <div class="projects-list">
                     <article class="panel project-card project-grid">
                         <div class="video-wrap">
-    <a class="video-cover" href="https://www.youtube.com/watch?v=_Hqa9qL7U1Y" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.youtube.com/vi/_Hqa9qL7U1Y/hqdefault.jpg" alt="Bounce-wars gameplay demo thumbnail">
-        <div class="video-overlay">
-            <span class="play-icon"><i class="fa-solid fa-play"></i></span>
-            <span class="watch-text">Xem video trên YouTube</span>
-        </div>
-    </a>
-</div>
+                            <a class="video-cover" href="https://www.youtube.com/watch?v=_Hqa9qL7U1Y" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.youtube.com/vi/_Hqa9qL7U1Y/hqdefault.jpg" alt="Bounce-wars gameplay demo thumbnail">
+                                <div class="video-overlay">
+                                    <span class="play-icon"><i class="fa-solid fa-play"></i></span>
+                                    <span class="watch-text">Xem video trên YouTube</span>
+                                </div>
+                            </a>
+                        </div>
                         <div>
                             <div class="project-head">
                                 <div>
@@ -853,21 +957,21 @@
                                 <span class="tag">Split-screen</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/Sundynny/bounce-wars.git" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> Mã nguồn</a>
+                                <a href="https://github.com/Sundynny/bounce-wars.git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github"></i> Mã nguồn</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="panel project-card project-grid">
-                       <div class="video-wrap">
-    <a class="video-cover" href="https://www.youtube.com/watch?v=oSN-NCjdZmc" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.youtube.com/vi/oSN-NCjdZmc/hqdefault.jpg" alt="Re:Rou gameplay demo thumbnail">
-        <div class="video-overlay">
-            <span class="play-icon"><i class="fa-solid fa-play"></i></span>
-            <span class="watch-text">Xem video trên YouTube</span>
-        </div>
-    </a>
-</div>
+                        <div class="video-wrap">
+                            <a class="video-cover" href="https://www.youtube.com/watch?v=oSN-NCjdZmc" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.youtube.com/vi/oSN-NCjdZmc/hqdefault.jpg" alt="Re:Rou gameplay demo thumbnail">
+                                <div class="video-overlay">
+                                    <span class="play-icon"><i class="fa-solid fa-play"></i></span>
+                                    <span class="watch-text">Xem video trên YouTube</span>
+                                </div>
+                            </a>
+                        </div>
                         <div>
                             <div class="project-head">
                                 <div>
@@ -890,7 +994,7 @@
                                 <span class="tag">Design Pattern</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/trungit-lab/Re-Rou.git" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> Mã nguồn</a>
+                                <a href="https://github.com/trungit-lab/Re-Rou.git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github"></i> Mã nguồn</a>
                             </div>
                         </div>
                     </article>
@@ -923,8 +1027,8 @@
                 </p>
                 <a href="mailto:trungitdev@gmail.com" class="btn btn-primary">trungitdev@gmail.com</a>
                 <div class="footer-social">
-                    <a href="https://github.com/trungit-lab" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/trungitdev/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/trungit-lab" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/trungitdev/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="mailto:trungitdev@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
                 <p class="copyright">© <span id="current-year"></span> Nguyễn Quốc Trung. All rights reserved.</p>
