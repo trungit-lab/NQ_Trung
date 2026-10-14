@@ -1,0 +1,156 @@
+{
+  "_note": "Danh sách project. 'description' & 'contributions' dạng song ngữ {vi,en}; icon/screenshots/platforms/genre giữ nguyên. Bấm tên nền tảng mở 'url'.",
+  "projects": [
+    {
+      "id": "jigstamp-solitaire",
+      "name": "JigStamp Solitaire",
+      "icon": "assets/images/projects/jigstamp_solitaire.png",
+      "studio": "SoftTrek Global",
+      "genre": "Puzzle · Solitaire · Casual Mobile",
+      "description": {
+        "vi": "Game puzzle kết hợp giữa cơ chế Solitaire cổ điển và ghép hình tem thư nghệ thuật, phát hành chính thức trên Android và iOS.",
+        "en": "A hybrid mobile puzzle game combining classic Solitaire card mechanics with artistic stamp-collecting jigsaw puzzles, shipped on Android and iOS."
+      },
+      "screenshots": [
+        "assets/images/projects/jigstamp_solitaire_shot_1.webp",
+        "assets/images/projects/jigstamp_solitaire_shot_2.webp",
+        "assets/images/projects/jigstamp_solitaire_shot_3.webp",
+        "assets/images/projects/jigstamp_solitaire_shot_4.webp",
+        "assets/images/projects/jigstamp_solitaire_shot_5.webp"
+      ],
+      "platforms": [
+        { "name": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.stamp.solitaire.softtrek" },
+        { "name": "App Store", "url": "https://apps.apple.com/us/app/jigstamp-solitaire/id6781104628" }
+      ],
+      "contributions": [
+        { "vi": "Đảm nhận Solo Development: xây dựng toàn bộ gameplay, thuật toán luật xếp bài và cơ chế tính điểm.", "en": "Handled solo development: built core card gameplay, card layout algorithms, and scoring mechanics." },
+        { "vi": "Thiết kế và triển khai toàn bộ hệ thống UI/UX responsive tương thích nhiều tỷ lệ màn hình mobile.", "en": "Designed and implemented responsive UI/UX system adapting cleanly across diverse mobile screen ratios." },
+        { "vi": "Tối ưu hóa hiệu năng, giảm thiểu giật lag, xử lý bug và hỗ trợ hoàn thiện bản build store.", "en": "Optimized runtime performance, squashed edge-case bugs, and supported store release builds." }
+      ]
+    },
+    {
+      "id": "yarn-spin",
+      "name": "Yarn Spin: Color Match 3D",
+      "icon": "assets/images/projects/yarn_spin.png",
+      "studio": "SoftTrek Global",
+      "genre": "Puzzle · Color Match · 3D Casual",
+      "description": {
+        "vi": "Game giải đố 3D kết hợp xoay bàn chơi, ghép các cuộn len cùng màu và dệt nên các tác phẩm pixel art nghệ thuật bắt mắt.",
+        "en": "A satisfying 3D puzzle game: spin the board, match colorful yarn spools, and weave vibrant pixel-art pictures."
+      },
+      "screenshots": [
+        "assets/images/projects/yarn_spin_shot_1.webp",
+        "assets/images/projects/yarn_spin_shot_2.webp",
+        "assets/images/projects/yarn_spin_shot_3.webp",
+        "assets/images/projects/yarn_spin_shot_4.webp",
+        "assets/images/projects/yarn_spin_shot_5.webp"
+      ],
+      "platforms": [
+        { "name": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.yarn.spin.color.match.bt" }
+      ],
+      "contributions": [
+        { "vi": "Phát triển hệ thống sinh map tự động từ ảnh (Pixel Art Image to Map Generator), chuyển đổi dữ liệu ảnh thành cấu trúc màn chơi 3D.", "en": "Built an automated image-to-map generation system, converting pixel-art image data into 3D gameplay board configurations." },
+        { "vi": "Lập trình core gameplay: cơ chế xoay bàn chơi 3D, thuật toán ghép màu các cuộn len và xử lý logic kết thúc màn.", "en": "Engineered core game mechanics: 3D board rotation, color-matching yarn spool algorithms, and win/loss resolution." },
+        { "vi": "Xây dựng công cụ Level Editor tùy biến trong Unity Editor hỗ trợ Game Designer thiết kế và tinh chỉnh màn chơi nhanh chóng.", "en": "Developed a custom in-engine Level Editor in Unity, empowering game designers to efficiently author and balance levels." }
+      ]
+    },
+    {
+      "id": "category-jam",
+      "name": "Category Jam",
+      "icon": "assets/images/projects/category_jam.png",
+      "studio": "SoftTrek Global",
+      "genre": "Puzzle · Match & Sort · Casual Mobile",
+      "description": {
+        "vi": "Game giải đố phân loại đồ vật vui nhộn với đồ họa bắt mắt, hệ thống màn chơi phong phú và trải nghiệm tương tác mượt mà trên di động.",
+        "en": "A vibrant casual sorting puzzle game featuring intuitive categorizing gameplay, diverse challenging levels, and satisfying interactions."
+      },
+      "screenshots": [
+        "assets/images/projects/category_jam_shot_1.webp",
+        "assets/images/projects/category_jam_shot_2.webp",
+        "assets/images/projects/category_jam_shot_3.webp",
+        "assets/images/projects/category_jam_shot_4.webp",
+        "assets/images/projects/category_jam_shot_5.webp"
+      ],
+      "platforms": [
+        { "name": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.category.jam.softtrek" }
+      ],
+      "contributions": [
+        { "vi": "Tham gia phát triển các tính năng gameplay và tương tác kéo thả trong bàn chơi.", "en": "Contributed to gameplay feature implementations and responsive drag-and-drop mechanics." },
+        { "vi": "Xây dựng các màn hình UI, pop-up kết thúc màn, rương phần thưởng và hiệu ứng visual feedback.", "en": "Built UI screens, end-of-level victory popups, reward chests, and visual feedback animations." },
+        { "vi": "Fix bug vận hành, cải thiện độ mượt và tối ưu bản build trên Google Play.", "en": "Resolved bugs, polished interaction smoothness, and maintained production build stability." }
+      ]
+    },
+    {
+      "id": "space-hole",
+      "name": "Space Hole",
+      "icon": "assets/images/projects/space_hole.png",
+      "studio": "SKYBULL Gaming Studio",
+      "genre": "Idle · Tower Defense · Arcade Mobile",
+      "description": {
+        "vi": "Game mobile arcade phòng thủ không gian kết hợp cơ chế hố đen nuốt vũ khí và nâng cấp hỏa lực chống lại các đợt quái vật ngoài hành tinh.",
+        "en": "A mobile arcade space defense game combining black-hole weapon consumption mechanics with firepower upgrades to defeat alien invaders."
+      },
+      "screenshots": [
+        "assets/images/projects/space_hole_shot_1.webp",
+        "assets/images/projects/space_hole_shot_2.webp",
+        "assets/images/projects/space_hole_shot_3.webp",
+        "assets/images/projects/space_hole_shot_4.webp",
+        "assets/images/projects/space_hole_shot_5.webp"
+      ],
+      "platforms": [
+        { "name": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.skybull.spacehole" }
+      ],
+      "contributions": [
+        { "vi": "Phát triển logic gameplay, hệ thống enemy theo wave và cơ chế hố đen hút vũ khí.", "en": "Developed gameplay logic, wave-based enemy behaviors, and black-hole absorption mechanics." },
+        { "vi": "Triển khai giao diện nâng cấp, hiển thị HUD và hệ thống phần thưởng sau mỗi màn.", "en": "Built upgrade interfaces, in-game combat HUD, and end-stage reward systems." },
+        { "vi": "Tối ưu số lượng đạn đạo và object pooling đảm bảo khung hình ổn định trên mobile.", "en": "Optimized bullet pooling and entity lifecycle management for stable 60 FPS on mobile." }
+      ]
+    },
+    {
+      "id": "space-hole-2",
+      "name": "Space Hole 2",
+      "icon": "assets/images/projects/space_hole_2.png",
+      "studio": "SKYBULL Gaming Studio",
+      "genre": "Idle · Tower Defense · Arcade Mobile",
+      "description": {
+        "vi": "Phần tiếp theo của Space Hole với nâng cấp đồ họa, mở rộng hệ thống vũ khí, boss chiến đa dạng và cơ chế phòng thủ chuyên sâu.",
+        "en": "The sequel to Space Hole featuring upgraded visuals, expanded weapon arsenals, diverse boss fights, and deeper tactical defense mechanics."
+      },
+      "screenshots": [
+        "assets/images/projects/space_hole_2_shot_1.webp",
+        "assets/images/projects/space_hole_2_shot_2.webp",
+        "assets/images/projects/space_hole_2_shot_3.webp",
+        "assets/images/projects/space_hole_2_shot_4.webp",
+        "assets/images/projects/space_hole_2_shot_5.webp"
+      ],
+      "platforms": [
+        { "name": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.Skybull.BlackHole2" }
+      ],
+      "contributions": [
+        { "vi": "Mở rộng hệ thống gameplay, thiết kế các cơ chế vũ khí mới và hành vi quái vật nâng cao.", "en": "Expanded gameplay architecture, developing new weapon behaviors and advanced enemy AI patterns." },
+        { "vi": "Tái thiết kế UI thân thiện, hỗ trợ thao tác một tay và hiệu ứng visual bắt mắt.", "en": "Redesigned intuitive UI supporting one-handed controls and dynamic visual effects." },
+        { "vi": "Xử lý bug, tối ưu bộ nhớ và hỗ trợ xuất bản phát hành trên CH Play.", "en": "Fixed runtime edge-cases, reduced memory footprint, and prepared Google Play releases." }
+      ]
+    },
+    {
+      "id": "piaggio-3d-training",
+      "name": "Piaggio 3D Training Simulator",
+      "icon": "assets/images/projects/piaggio_3d_training.png",
+      "studio": "EPICSOFT",
+      "genre": "3D Simulation · Technical Training · Interactive",
+      "description": {
+        "vi": "Ứng dụng mô phỏng 3D tương tác hỗ trợ đào tạo kỹ thuật viên lắp ráp và bảo dưỡng động cơ xe máy cho Piaggio.",
+        "en": "An interactive 3D simulation application designed for technical assembly and maintenance training for Piaggio engineers."
+      },
+      "screenshots": [
+        "assets/images/projects/piaggio_3d_training.png"
+      ],
+      "platforms": [],
+      "contributions": [
+        { "vi": "Xây dựng hệ thống điều khiển camera 3D (xoay quanh chi tiết máy, zoom mượt mà, focus tự động).", "en": "Built 3D inspection camera controls (orbit, focus, smooth zoom onto machine parts)." },
+        { "vi": "Lập trình quy trình tháo lắp từng linh kiện phụ tùng xe theo quy chuẩn kỹ thuật chính xác.", "en": "Programmed realistic part assembly/disassembly sequencing following technical engineering standards." },
+        { "vi": "Thiết kế luồng UI hướng dẫn từng bước và hiển thị thông số chi tiết của động cơ.", "en": "Built guided UI walkthrough flows displaying component specs and assembly checkpoints." }
+      ]
+    }
+  ]
+}

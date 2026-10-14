@@ -1,0 +1,20 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+<defs>
+  <radialGradient id="g" cx=".35" cy=".28"><stop stop-color="#6ef4ff"/><stop offset=".45" stop-color="#1a4b68"/><stop offset="1" stop-color="#071019"/></radialGradient>
+  <filter id="gl"><feGaussianBlur stdDeviation="16"/></filter>
+</defs>
+<rect width="900" height="900" rx="160" fill="#071019"/>
+<circle cx="450" cy="450" r="310" fill="none" stroke="#56e6ff" stroke-width="26" opacity=".1" filter="url(#gl)"/>
+<g fill="none" stroke="#79f2ff" stroke-width="9">
+  <circle cx="300" cy="600" r="125"/><circle cx="650" cy="600" r="125"/>
+  <path d="M300 600 425 420 560 600 430 600 350 485M425 420h130l65 180M555 420l74-88M620 332h110"/>
+  <path d="M401 410c55-62 153-62 205 0" opacity=".65"/>
+</g>
+<g fill="none" stroke="#43e4aa" stroke-width="4" opacity=".5">
+  <path d="M160 180h580M190 230h520M220 280h460" stroke-dasharray="16 20"/>
+  <path d="M150 745h600" stroke-dasharray="12 18"/>
+</g>
+<text x="115" y="120" fill="#eaffff" font-family="Arial" font-size="54" font-weight="800">3D TRAINING</text>
+<text x="118" y="166" fill="#66e9ff" font-family="Arial" font-size="19" font-weight="700" letter-spacing="5">SIMULATOR</text>
+</svg>

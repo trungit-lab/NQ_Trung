@@ -1,0 +1,144 @@
+{
+  "_note": "Sửa nội dung ở đây. Trường nào KHÁC nhau giữa 2 ngôn ngữ thì viết dạng {\"vi\":\"...\",\"en\":\"...\"}; trường GIỐNG nhau để chuỗi thường.",
+
+  "name": "Nguyễn Quốc Trung",
+  "role": {
+    "vi": "Unity Game Developer",
+    "en": "Unity Game Developer"
+  },
+  "appliedPosition": {
+    "vi": "Unity Developer · Mobile & Midcore Games",
+    "en": "Unity Developer · Mobile & Midcore Games"
+  },
+  "avatar": "NQT.jpg",
+
+  "objective": {
+    "vi": "Unity Developer với kinh nghiệm thực chiến phát triển gameplay systems, responsive UI và tối ưu hiệu năng cho game mobile & midcore. Chủ động học hỏi, tư duy hệ thống vững vàng, thích code rõ ràng và ưu tiên giải pháp có thể maintain lâu dài.",
+    "en": "Unity Developer with hands-on production experience in gameplay systems, responsive UI, and mobile/midcore game optimization. Strong architectural thinking, rapid learner, and committed to clean, maintainable, production-ready code."
+  },
+
+  "_note_contacts": "3 hàng × 2 cột",
+  "contacts": [
+    { "icon": "#i-phone",    "text": "0866536939",                 "href": "tel:0866536939" },
+    { "icon": "#i-pin",      "text": { "vi": "Hà Nội, Việt Nam", "en": "Hanoi, Vietnam" }, "href": "" },
+    { "icon": "#i-mail",     "text": "trungitdev@gmail.com",     "href": "mailto:trungitdev@gmail.com" },
+    { "icon": "#b-github",   "text": "github.com/trungit-lab",   "href": "https://github.com/trungit-lab" },
+    { "icon": "#b-linkedin", "text": "linkedin.com/in/trungitdev","href": "https://www.linkedin.com/in/trungitdev/" },
+    { "icon": "#i-link",     "text": "trungit-lab.github.io/NQ_Trung", "href": "https://trungit-lab.github.io/NQ_Trung/" }
+  ],
+
+  "skills": [
+    {
+      "group": "Engine & Language",
+      "items": ["Unity", "C#", "C++", "Git", "AI Tools (Claude, Copilot)"]
+    },
+    {
+      "group": "Frameworks & Architecture",
+      "items": ["DOTween", "Addressables", "UniTask", "ScriptableObject", "Design Patterns"]
+    },
+    {
+      "group": "Core Specialties",
+      "items": ["Gameplay Systems", "UI/UX Implementation", "Physics & Math", "Profiling & Optimization"]
+    },
+    {
+      "group": "Platforms & Build",
+      "items": ["Android (APK/AAB)", "iOS Build Support", "Mobile Optimization"]
+    },
+    {
+      "group": { "vi": "Công cụ & Ngoại ngữ", "en": "Tools & Languages" },
+      "items": [
+        "Visual Studio / Rider",
+        "Figma",
+        { "vi": "Tiếng Anh — Đọc hiểu tài liệu kỹ thuật tốt", "en": "English — Good technical documentation reading" }
+      ]
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "SoftTrek Global",
+      "time": "04/2026 — 09/2026",
+      "position": {
+        "vi": "Unity Developer · Mobile Puzzle Games",
+        "en": "Unity Developer · Mobile Puzzle Games"
+      },
+      "points": [
+        {
+          "vi": "Phát triển độc lập (Solo Development) dự án JigStamp Solitaire: triển khai cơ chế thẻ bài, thuật toán xếp bài, tính điểm và toàn bộ hệ thống UI/UX.",
+          "en": "Handled solo development for JigStamp Solitaire: implemented card stacking mechanics, rules, scoring algorithms, and full responsive UI/UX."
+        },
+        {
+          "vi": "Dự án Yarn Spin: Color Match 3D: phát triển hệ thống sinh map tự động từ ảnh, lập trình core gameplay xoay bàn & ghép màu len, xây dựng công cụ Level Editor tùy biến.",
+          "en": "Yarn Spin: Color Match 3D: engineered automated image-to-map generation, core board rotation & yarn matching gameplay, and built custom in-engine Level Editor."
+        },
+        {
+          "vi": "Tham gia phát triển tính năng gameplay, xử lý bug và tối ưu hiệu năng bản build cho Category Jam trên Google Play & App Store.",
+          "en": "Contributed to gameplay features, bug fixing, and build optimization for Category Jam on Google Play & App Store."
+        },
+        {
+          "vi": "Đảm bảo chất lượng bản build, tương thích đa dạng thiết bị và tối ưu trải nghiệm mượt mà cho người chơi.",
+          "en": "Ensured build stability across diverse mobile devices, optimizing framerate and smooth player interaction."
+        }
+      ]
+    },
+    {
+      "company": "SKYBULL Gaming Studio",
+      "time": "12/2025 — 04/2026",
+      "position": {
+        "vi": "Unity Developer · Midcore & Idle Games",
+        "en": "Unity Developer · Midcore & Idle Games"
+      },
+      "points": [
+        {
+          "vi": "Phát triển tính năng gameplay, hệ thống enemy theo đợt sóng và UI cho Space Hole & Space Hole 2 (thể loại idle tower-defense).",
+          "en": "Developed gameplay features, wave-based enemy systems, and responsive UI for Space Hole & Space Hole 2 (idle tower-defense)."
+        },
+        {
+          "vi": "Tham gia tối ưu runtime (object pooling, giảm draw calls), xử lý crash/bug và hỗ trợ đóng gói xuất bản Google Play.",
+          "en": "Assisted in runtime optimization (object pooling, draw call reduction), bug resolution, and Google Play release builds."
+        },
+        {
+          "vi": "Phối hợp chặt chẽ với team thiết kế game để tinh chỉnh game feel, độ phản hồi và nhịp độ chiến đấu.",
+          "en": "Collaborated with game designers to tune combat pacing, responsive controls, and visual impact."
+        }
+      ]
+    },
+    {
+      "company": "EPICSOFT",
+      "time": "06/2024 — 10/2024",
+      "position": {
+        "vi": "Unity Developer · 3D Training Simulator",
+        "en": "Unity Developer · 3D Training Simulator"
+      },
+      "points": [
+        {
+          "vi": "Xây dựng các cơ chế tương tác 3D, điều khiển camera thông minh và luồng UI cho ứng dụng đào tạo kỹ thuật Piaggio.",
+          "en": "Built 3D interaction mechanics, smooth inspection camera controls, and UI flows for Piaggio technical training simulation."
+        },
+        {
+          "vi": "Lập trình quy trình tháo lắp mô hình động cơ và hiển thị thông số kỹ thuật trực quan theo quy chuẩn kỹ thuật.",
+          "en": "Programmed realistic CAD part assembly/disassembly sequencing and visual technical inspection flows."
+        }
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "degree": {
+        "vi": "Kỹ sư — Công nghệ thông tin và Truyền thông (GPA 3.0)",
+        "en": "Engineer — Information & Communication Technology (GPA 3.0)"
+      },
+      "school": {
+        "vi": "Đại học Công nghiệp Hà Nội (HaUI)",
+        "en": "Hanoi University of Industry (HaUI)"
+      },
+      "time": "2022 — 2026",
+      "honors": {
+        "vi": "Giải 3 Nghiên cứu khoa học cấp trường (2024–2025) · Tình nguyện viên CyberSchool CyberKid Vietnam (2023–2024)",
+        "en": "3rd Prize in University Scientific Research (2024–2025) · Volunteer at CyberSchool CyberKid Vietnam (2023–2024)"
+      }
+    }
+  ]
+}
+
