@@ -145,8 +145,9 @@ a.contact:hover .ci-ico { background: var(--c-blue); color: #fff; }
 .edu-item::before { content: ""; position: absolute; left: 0; top: 6px; bottom: 4px; width: 3px; border-radius: 3px; background: var(--c-gray); }
 .edu-degree { font-size: 17px; }
 .edu-school { color: var(--c-accent); font-weight: 600; font-size: 15px; margin-top: 4px; }
-.edu-time { color: var(--c-muted); font-size: 13px; margin-top: 3px; }
-.edu-honors { margin-top: 6px; font-size: 13.5px; color: var(--c-body); line-height: 1.4; }
+.edu-honors { margin-top: 8px; font-size: 13.5px; color: var(--c-body); line-height: 1.45; display: flex; flex-direction: column; gap: 5px; }
+.edu-honor-item { position: relative; padding-left: 16px; color: var(--c-body); }
+.edu-honor-item::before { content: ""; position: absolute; left: 2px; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--c-accent); }
 
 /* ---- Merged Projects block (list + detail in one panel) - */
 .pb-grid { display: grid; grid-template-columns: 40% 60%; align-items: stretch; }

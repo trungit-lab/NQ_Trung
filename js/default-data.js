@@ -183,10 +183,16 @@ window.DEFAULT_CV = {
         "en": "Hanoi University of Industry (HaUI)"
       },
       "time": "2022 — 2026",
-      "honors": {
-        "vi": "Giải 3 Nghiên cứu khoa học cấp trường (2024–2025) · Tình nguyện viên CyberSchool CyberKid Vietnam (2023–2024)",
-        "en": "3rd Prize in University Scientific Research (2024–2025) · Volunteer at CyberSchool CyberKid Vietnam (2023–2024)"
-      }
+      "honors": [
+        {
+          "vi": "Giải 3 Nghiên cứu khoa học cấp trường (2024–2025)",
+          "en": "3rd Prize in University Scientific Research (2024–2025)"
+        },
+        {
+          "vi": "Tình nguyện viên CyberSchool CyberKid Vietnam (2023–2024)",
+          "en": "Volunteer at CyberSchool CyberKid Vietnam (2023–2024)"
+        }
+      ]
     }
   ]
 };

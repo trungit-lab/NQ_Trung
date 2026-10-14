@@ -143,7 +143,15 @@
         item.appendChild(E("div", "edu-school", esc(L(ed.school))));
         item.appendChild(E("div", "edu-time", esc(L(ed.time))));
         if (ed.honors) {
-          item.appendChild(E("div", "edu-honors", esc(L(ed.honors))));
+          var hBox = E("div", "edu-honors");
+          if (Array.isArray(ed.honors)) {
+            ed.honors.forEach(function (h) {
+              hBox.appendChild(E("div", "edu-honor-item", esc(L(h))));
+            });
+          } else {
+            hBox.appendChild(E("div", "edu-honor-item", esc(L(ed.honors))));
+          }
+          item.appendChild(hBox);
         }
         host.appendChild(item);
       });
